@@ -9,6 +9,17 @@
 
 <br>
 
+# Index
+1. [Exploratory Data Analysis](#exploratory-data-analysis)
+2. [Feature Engineering](#feature-engineering)
+3. [Machine Learning Models](#machine-learning-models)
+4. [Churn Prediction or Probable Churns](#churn-prediction-or-probable-churns)
+5. [Personalized Offers](#personalized-offers)
+6. [Technical Overview](#technical-overview)
+7. [Conclusion](#conclusion)
+
+<br>
+
 # Exploratory Data Analysis:
 The dataset consists of four tables in separate .csv files, covering a two-year span of purchase transactions for 2500 households. Additionally, demographic information of households, product details, and coupon codes per product based on business policies are available.
 
@@ -135,9 +146,10 @@ Pipeline Execution Steps:
    - Demographics: `s3://avs-churn-predictor/raw/demographics`
    - Coupons: `s3://avs-churn-predictor/raw/coupons`
    - Products: `s3://avs-churn-predictor/raw/products`
-2. Run the `probable-churn` SageMaker notebook to generate the probable churn dataset. 
+2. Run the `churn-model-generator` SageMaker notebook to train the Random Forest Classifier (**if not already trained**).
+3. Run the `probable-churn` SageMaker notebook to generate the probable churn dataset. 
    - The dataset will be saved at `s3://avs-churn-predictor/probable-churn`.
-3. Run the `personalized-offers` SageMaker notebook to generate the personalized offers dataset.
+4. Run the `personalized-offers` SageMaker notebook to generate the personalized offers dataset.
    - The dataset will be saved at `s3://avs-churn-predictor/personalized-offers`.
 
 Note: The above steps are manual and can be easily automated using AWS resources, but for the sake of project and cost considerations, the steps are kept manual.
