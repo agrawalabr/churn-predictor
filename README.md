@@ -1,4 +1,4 @@
-![alt text](image.png)
+![alt text](nyu-logo.png)
 # Reducing Customer Churn in Retail with Personalized Incentives
 
 ### Big Data (CSGY-6513-C) | Fall 2024
@@ -66,14 +66,15 @@ Experiments were conducted with three different machine learning models to predi
 
 The Random Forest Classifier emerged as the top-performing model, configured with **200 estimators** and a **random state of 42**. It was evaluated using **6-fold cross-validation**, achieving an impressive accuracy of **96.26%**. 
 - The feature importance weights were determined as follows:
-    - **Frequency**: 0.24
-    - **Monetary Value**: 0.20
-    - **Average Basket Size**: 0.20
-    - **Discount Utilization**: 0.18
-    - **Discount Count**: 0.18
-
+    - **Frequency**: 0.243
+    - **Monetary Value**: 0.204
+    - **Average Basket Size**: 0.196
+    - **Discount Count**: 0.182
+    - **Discount Utilization**: 0.175
+    
 - **Reference**: Detailed analysis available in [churn-model-generator.ipynb](churn-model-generator.ipynb).
 
+![alt text](feature-weights.png)
 <br>
 
 # Churn Prediction or Probable Churns: 
@@ -161,10 +162,15 @@ This project effectively established a robust system for predicting customer chu
 
 Key Insights from the Dataset:
 - Out of 2500 households, only 800 have registered demographic information.
-- Over a 52-week period, the predicted and actual churns account for more than 25% of the total households.
+- Over a 52-week period, the predicted and actual churns account for more than 15.3% of the total households.
 - Current offers and coupons are linked to a limited range of products.
 
-Based on the analysis, approximately 3.5% of the households identified as probable or already churned have received offers. The following recommendations are proposed:
+Based on the analysis, approximately 3.4% of the households identified as probable or already churned have received offers. The following recommendations are proposed:
 - Enhance the dataset with additional demographic details for households.
 - Expand the range of products associated with offers to increase customer engagement.
 - Distribute offers through various channels to optimize customer engagement.
+
+<br>
+
+<img src="probable-churn.png" alt="Probable Churn" width="42%" height="350px" style="display: inline-block;">
+<img src="offers-distribution.png" alt="Offers Distribution" width="48%" height="350px" style="display: inline-block;">
